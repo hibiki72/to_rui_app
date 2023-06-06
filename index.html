@@ -2,11 +2,26 @@
 <html>
 <head>
     <title>ホームページ</title>
+    <script src="script.js"></script>
+    <style>
+        .fun-effect {
+            animation: rotate 2s infinite linear;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>ホームページ</h1>
-    <a href="page1.html">Page 1へ</a>
+    <a href="#" onclick="navigateToPage('page1.html'); showAlert('Page 1へ遷移します')">Page 1へ</a>
     <br>
-    <a href="page2.html">Page 2へ</a>
+    <a href="#" onclick="navigateToPage('page2.html'); showAlert('Page 2へ遷移します')">Page 2へ</a>
 </body>
 </html>
