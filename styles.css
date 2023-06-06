@@ -15,6 +15,24 @@ h1 {
     overflow-y: scroll;
 }
 
+#message-container div {
+    position: relative;
+}
+
+.message-content {
+    margin-bottom: 5px;
+}
+
+.message-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.message-actions button {
+    margin-left: 5px;
+}
+
 #message-form input,
 #message-form textarea {
     display: block;

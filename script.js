@@ -23,9 +23,24 @@ messageForm.addEventListener('submit', (event) => {
     }
 
     const timestamp = new Date().toLocaleString();
-    const formattedMessage = `<div><strong>${name}:</strong> ${message}<br><small>${timestamp}</small></div>`;
-    messageContainer.innerHTML += formattedMessage;
+    const messageElement = document.createElement('div');
+    messageElement.innerHTML = `
+        <div class="message-content">
+            <strong>${name}:</strong> ${message}<br>
+            <small>${timestamp}</small>
+        </div>
+        <div class="message-actions">
+            <button onclick="addLike(this)">グッド</button>
+        </div>
+    `;
+    messageContainer.appendChild(messageElement);
 
     nameInput.value = '';
     messageInput.value = '';
 });
+
+function addLike(button) {
+    const likeCount = button.dataset.likes ? parseInt(button.dataset.likes) : 0;
+    button.dataset.likes = likeCount + 1;
+    button.innerText = `グッド (${likeCount + 1})`;
+}
