@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#message-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+#message-form input,
+#message-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#message-form button {
+    display: block;
+    margin: 10px 0;
+}
