@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ホームページ</title>
-    <script src="script.js"></script>
-    <style>
-        .fun-effect {
-            animation: rotate 2s infinite linear;
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
+    <title>掲示板</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>ホームページ</h1>
-    <a href="#" onclick="navigateToPage('page1.html'); showAlert('Page 1へ遷移します')">Page 1へ</a>
-    <br>
-    <a href="#" onclick="navigateToPage('page2.html'); showAlert('Page 2へ遷移します')">Page 2へ</a>
+    <h1>掲示板</h1>
+    <div id="message-container"></div>
+    <form id="message-form">
+        <input type="text" id="name-input" placeholder="名前">
+        <textarea id="message-input" placeholder="メッセージ"></textarea>
+        <button type="submit">投稿</button>
+    </form>
+
+    <script src="script.js"></script>
 </body>
 </html>
